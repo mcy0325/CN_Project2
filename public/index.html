@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Application</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <header>
+        <h2>Chat Application</h2>
+    </header>
+    <section class="chat-section">
+        <ul id="messages"></ul>
+        <div class="message-input">
+            <input id="txtInput" placeholder="Type a message..." />
+            <button id="btnSend">Send</button>
+        </div>
+    </section>
+    <div id="dropbox" class="dropbox">
+        Drop images here
+    </div>
+    <script src="scripts/chat.js"></script>
+</body>
+</html>
