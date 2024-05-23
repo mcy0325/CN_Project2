@@ -83,3 +83,38 @@ img {
     border-radius: 10px;
     margin: 10px;
 }
+.login-section {
+    max-width: 400px;
+    margin: 50px auto; 
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    padding: 20px; 
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#loginForm input[type="text"], #loginForm input[type="password"] {
+    margin-bottom: 20px; 
+    padding: 15px; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    font-size: 16px;
+}
+
+#loginForm button[type="submit"] {
+    padding: 15px;
+    border: none; 
+    border-radius: 5px; 
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #FFCF80;
+    color: #fff; 
+    cursor: pointer; 
+}
+
+#loginForm button[type="submit"]:hover {
+    background-color: #c28257;}
