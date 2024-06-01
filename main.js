@@ -17,8 +17,8 @@ io.on('connection', (socket) => {
     socket.on('newuser', (user) => {
         socket.username = user;
 
-        socket.emit('connection.success', ResponseMessage("Server", `Hello ${socket.username}, you have successfully connected`));
-        socket.broadcast.emit('connection.others', ResponseMessage("Server", `${socket.username} has connected`));
+        socket.emit('connection.success', ResponseMessage("Server", `안녕하세요 ${socket.username}님, 서버와 정상 연결 되었습니다.`));
+        socket.broadcast.emit('connection.others', ResponseMessage("Server", `${socket.username}님이 입장 하셨습니다.`));
     });
 
     socket.on('send', (msg) => {
@@ -30,7 +30,7 @@ io.on('connection', (socket) => {
     });
 
     socket.on('disconnect', () => {
-        socket.broadcast.emit("connection.others", ResponseMessage("Server", `${socket.username} has left`));
+        socket.broadcast.emit("connection.others", ResponseMessage("Server", `${socket.username} 님이 떠났습니다.`));
     });
 });
 
@@ -40,5 +40,6 @@ function ResponseMessage(u, msg) {
 
 const port = process.env.PORT || 3000;
 server.listen(port, () => {
-    console.log(`App started at port ${port}`);
+    console.log(`앱이 ${port} 포트로 열렸습니다.`);
 });
+
