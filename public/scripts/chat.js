@@ -1,16 +1,12 @@
 $(document).ready(function () {
     var socket = io.connect("/");
 
-    var userName = localStorage.getItem('username');
-    var password = localStorage.getItem('password');
-
+    var userName = prompt("What is your name?");
     if (!userName) {
-        window.location.href = 'login.html'; 
+        userName = "Guest";
     }
 
     socket.emit("newuser", userName);
-    socket.emit("password", password);
-
 
     socket.on('connection.success', function (res) {
         $('#messages').append(`<li>${res.UserName}: ${res.Message}</li>`);
@@ -39,7 +35,7 @@ $(document).ready(function () {
         evt.preventDefault();
         var file = evt.originalEvent.dataTransfer.files[0];
         if (file.size > 1 * 1024 * 1024) {
-            alert("1MB를 넘는 사진은 전송 불가능합니다");
+            alert("Max file size is 1MB");
             return;
         }
         if (file.type == 'image/png' || file.type == 'image/jpg' || file.type == 'image/jpeg') {
@@ -49,7 +45,7 @@ $(document).ready(function () {
             }
             reader.readAsDataURL(file);
         } else {
-            alert("파일의 타입이 맞지 않습니다.PNG, JPG, JPGE만 가능합니다");
+            alert("Invalid file type. Only PNG, JPG, and JPEG allowed.");
         }
     });
 
@@ -58,7 +54,6 @@ $(document).ready(function () {
         img.src = res.Message;
         var li = document.createElement('li');
         li.innerHTML = `${res.UserName}: `;
-        li.innerHTML = `${res.password}: `;
         li.appendChild(img);
         $('#messages').append(li);
     });
