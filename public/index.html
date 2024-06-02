@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Chat Application</title>
+    <title>컴퓨터 네트워크</title>
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
 </head>
 <body>
     <header>
-        <h2>Chat Application</h2>
+        <h2>컴퓨터 네트워크 3조 채팅방</h2>
     </header>
-    <section class="chat-section">
-        <ul id="messages"></ul>
-        <div class="message-input">
-            <input id="txtInput" placeholder="Type a message..." />
-            <button id="btnSend">Send</button>
+    <div class="content">
+        <section class="chat-section">
+            <ul id="messages"></ul>
+            <div class="message-input">
+                <input id="txtInput" placeholder="메세지를 입력하세요" />
+                <button id="btnSend">전송</button>
+                <div id="dropbox" class="dropbox"><img src="./iconGallery.png"></div>
+            </div>
+        </section>
+        <div class="image-column">
+            <img src="./dog.jpg" alt="dog image">
+            <img src="./cat.jpg" alt="cat image">
+            <img src="./penguin.jpg" alt="penguin image">
         </div>
-    </section>
-    <div id="dropbox" class="dropbox">
-        Drop images here
     </div>
     <script src="scripts/chat.js"></script>
 </body>
+
 </html>
