@@ -1,26 +1,12 @@
-# Chat Application
+# 💬 컴퓨터 네트워크 프로젝트 3조
 
-This project is a real-time chat application that allows users to communicate through live messages and share images using a drag-and-drop interface.
+### 🌐 프로젝트 개요
+이 프로젝트는 **컴퓨터 네트워크** 수업의 일환으로 진행되었습니다. 저희는 **HTML, CSS, Node.js**를 사용하여 **채팅 웹** 애플리케이션을 개발했으며, 포트 포워딩을 통해 실습 환경을 구성했습니다.
 
-## Technologies Used
+### 👥 팀 구성
+- **팀원 1**: 김보경
+- **팀원 2**: 문채영
+- **팀원 3**: 이서정
 
-* Node.js: JavaScript runtime environment for server-side development.
-* Express.js: Web framework built on Node.js for creating web applications.
-* Socket.IO: Enables real-time, bidirectional communication between web clients and servers.
-
-## Features
-
-* Live messaging: Users can send and receive messages in real-time.
-* Drag-and-drop image sharing: Users can easily share images by dragging and dropping them into the chat window.
-
-## Installation
-
-**Prerequisites:**
-
-* Node.js and npm (Node Package Manager) installed on your system (https://nodejs.org/)
-
-**Steps:**
-
-1. Clone this repository.
-2. Running the Application: Instructions on running the application are detailed in the HowToRun.txt file.
-   
+### 🚀 주요 기능
+- **실시간 채팅**: 사용자 간 실시간 메시지 및 이미지 전송
