@@ -1,12 +1,15 @@
 $(document).ready(function () {
   var socket = io.connect("/");
 
-  var userName = prompt("닉네임을 입력해주세요");
+  var userName = localStorage.getItem("username");
+  var password = localStorage.getItem("password");
+
   if (!userName) {
-    userName = "Guest";
+    window.location.href = "login.html";
   }
 
   socket.emit("newuser", userName);
+  socket.emit("password", password);
 
   socket.on("connection.success", function (res) {
     $("#messages").append(`<li>${res.UserName}: ${res.Message}</li>`);
@@ -58,6 +61,7 @@ $(document).ready(function () {
     img.src = res.Message;
     var li = document.createElement("li");
     li.innerHTML = `${res.UserName}: `;
+    li.innerHTML = `${res.password}: `;
     li.appendChild(img);
     $("#messages").append(li);
   });

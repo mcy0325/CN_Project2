@@ -37,12 +37,15 @@ h2 {
 .chat-section {
     flex: 5;
     margin-left: 20px;
+    flex: 5;
+    margin-left: 20px;
     max-width: 800px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin-top: 20px;
+    width: 100%;
     width: 100%;
 }
 
@@ -72,12 +75,14 @@ input[type="text"] {
 
 button {
     padding: 0px 20px;
+    padding: 0px 20px;
     background-color: #333;
     color: #fff;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    margin: 10px;
     margin: 10px;
 }
 
@@ -89,7 +94,14 @@ input, button, .dropbox {
     height: 40px;
 }
 
+input, button, .dropbox {
+    height: 40px;
+}
+
 .dropbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,5 +110,60 @@ input, button, .dropbox {
 img {
     height: 100%;
     width: auto;
+    height: 100%;
+    width: auto;
     margin: 10px;
 }
+.login-section {
+    max-width: 400px;
+    margin: 50px auto; 
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    padding: 20px; 
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#loginForm input[type="text"], #loginForm input[type="password"] {
+    margin-bottom: 20px; 
+    padding: 15px; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    font-size: 16px;
+}
+
+#loginForm button[type="submit"] {
+    padding: 15px;
+    border: none; 
+    border-radius: 5px; 
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #FFCF80;
+    color: #fff; 
+    cursor: pointer; 
+}
+
+#loginForm button[type="submit"]:hover {
+    background-color: #c28257;}
+
+    .content {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .image-column {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .image-column img {
+        width: 100px;
+        height: auto;
+        margin-bottom: 10px;
+    }

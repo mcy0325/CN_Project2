@@ -12,5 +12,6 @@
     "express": "^4.19.2",
     "socket.io": "^4.7.5"
   },
-  "description": "This project is a real-time chat application that allows users to communicate through live messages and share images using a drag-and-drop interface."
+  "description": "This project is a real-time chat application that allows users to communicate through live messages and share images using a drag-and-drop interface.",
+  "devDependencies": {}
 }
